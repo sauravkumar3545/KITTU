@@ -10,76 +10,55 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================= */
   const projectsData = {
     1: {
-      title: "Employee Management System",
-      subtitle: "Java | Spring Boot | MySQL | JPA | Hibernate",
-      badge: "Demo Project",
-      description: "A comprehensive enterprise backend application designed for managing organizational employee records with resilient RESTful APIs and relational database persistence. Incorporates pagination, input validation, custom error handling, and transactional safety.",
-      technologies: ["Java 17+", "Spring Boot", "Spring Data JPA", "Hibernate", "MySQL", "REST APIs", "Maven"],
-      architecture: "Client Request → EmployeeController → EmployeeService → EmployeeRepository → MySQL Database",
+      title: "OTT Streaming Platform",
+      subtitle: "Java | Spring Boot | MySQL | Hibernate/JPA",
+      badge: "Jan 2026 – Mar 2026",
+      description: "A full-stack OTT streaming backend platform developed using Java, Spring Boot, and MySQL following a layered Controller–Service–Repository architecture. Features complete movie management, streaming catalog, and content operations.",
+      technologies: ["Java", "Spring Boot", "MySQL", "Hibernate/JPA", "REST APIs", "Maven"],
+      architecture: "Client Request → OTTController → OTTService → OTTRepository → MySQL Database",
       features: [
-        "Create, read, update, and delete (CRUD) employee records via RESTful endpoints",
-        "Search employees by department, designation, and name with dynamic query filters",
-        "Input validation using Hibernate Validator (@Valid, @NotNull, @Size)",
-        "Global exception handling with custom error responses (@ControllerAdvice)",
-        "Data persistence using Spring Data JPA with MySQL relational schemas",
-        "Comprehensive API documentation and Postman collections for endpoint testing"
+        "Developed full-stack OTT streaming platform following layered Controller–Service–Repository architecture",
+        "Implemented secure user authentication, movie management modules, and CRUD REST APIs for complete content operations",
+        "Integrated MySQL with Hibernate/JPA for efficient data persistence, entity mapping, and optimized database management",
+        "Implemented global exception handling and business validation to build maintainable and reliable backend components",
+        "Designed and tested RESTful endpoints using Postman with clean JSON response contracts"
       ],
       githubUrl: "https://github.com/PriyaModi1309",
-      liveDemoNote: "Demo Project: Mock backend service configured."
+      liveDemoNote: "Backend REST APIs configured with Spring Boot & MySQL."
     },
     2: {
-      title: "E-Commerce Backend API",
-      subtitle: "Java | Spring Boot | Spring Security | MySQL | JPA",
-      badge: "Demo Project",
-      description: "A scalable backend REST API designed for high-throughput modern e-commerce systems. Supports user registration, secure session authentication, product catalogs, relational cart management, order placement workflows, and role-based permissions.",
-      technologies: ["Java 17+", "Spring Boot", "Spring Security", "JWT Authentication", "MySQL", "Hibernate", "JPA"],
-      architecture: "Client Request → Security Filter Chain → Order/Product Controllers → Domain Services → Repositories → MySQL Database",
+      title: "BankX – Banking Management System",
+      subtitle: "Spring Boot | Spring Security | Hibernate | MySQL",
+      badge: "Apr 2026 – Jun 2026",
+      description: "A robust financial banking management system designed to handle customer accounts, transaction histories, and money transfers with Spring Boot, Spring Security, and MySQL database.",
+      technologies: ["Java", "Spring Boot", "Spring Security", "Hibernate", "MySQL", "REST APIs"],
+      architecture: "Client Request → Security Filter Chain → AccountController → BankingService → BankRepository → MySQL Database",
       features: [
-        "User registration and secure authentication with BCrypt password hashing",
-        "Role-based access control (RBAC) supporting Customer and Admin privileges",
-        "Product catalog management with category filters, inventory status, and price queries",
-        "Persistent shopping cart and relational item aggregation",
-        "Order processing pipeline with transactional ACID compliance",
-        "Clean REST API error contracts with HTTP status code mappings"
+        "Developed REST APIs for account management, deposits, withdrawals, and fund transfers between customer accounts",
+        "Implemented transaction processing and transaction history tracking using JPA/Hibernate with MySQL",
+        "Added authentication, input validation, exception handling, and secure role-based access control using Spring Security",
+        "Guaranteed atomic transactions and account balance consistency across concurrent operations",
+        "Handled custom banking domain exceptions with clear HTTP status codes"
       ],
       githubUrl: "https://github.com/PriyaModi1309",
-      liveDemoNote: "Demo Project: Mock backend service configured."
+      liveDemoNote: "Backend banking service configured with Spring Boot & Security."
     },
     3: {
-      title: "Banking Management System",
-      subtitle: "Java | Spring Boot | MySQL | REST API | Transactions",
-      badge: "Demo Project",
-      description: "A robust financial ledger and customer banking backend system built with Spring Boot. Focuses on strict transactional reliability (@Transactional), account balance integrity, transfer audits, and exception-safe ledger state handling.",
-      technologies: ["Java 17+", "Spring Boot", "Spring Data JPA", "MySQL", "REST APIs", "ACID Transactions"],
-      architecture: "Account Request → BankAccountController → BankingService (Transaction Boundary) → AccountRepository → MySQL Database",
+      title: "ShopSphere – E-Commerce Backend System",
+      subtitle: "Spring Boot | Hibernate | MySQL | REST API",
+      badge: "Jun 2026 – Aug 2026",
+      description: "A scalable e-commerce backend system managing users, products, shopping carts, orders, and inventory workflows with Spring Boot, Hibernate, and MySQL relational persistence.",
+      technologies: ["Java", "Spring Boot", "Hibernate", "MySQL", "REST API", "Spring Data JPA"],
+      architecture: "Client Request → Product/Cart/Order Controllers → Commerce Services → JPA Repositories → MySQL Database",
       features: [
-        "Account creation and customer profile onboarding with unique account numbers",
-        "Real-time funds deposit and withdrawal with account balance verification",
-        "Account-to-account funds transfer governed by atomic database transactions",
-        "Transaction history tracking and statement log generation",
-        "Custom banking domain exceptions (InsufficientBalanceException, AccountNotFoundException)",
-        "Secure REST endpoints with structured JSON responses"
+        "Developed REST APIs for user, product, cart, order, and inventory management covering the complete e-commerce workflow",
+        "Implemented database operations using Spring Data JPA and Hibernate with MySQL for reliable data persistence",
+        "Added input validation and centralized exception handling to ensure consistent and reliable backend operations",
+        "Optimized relational mappings and queries for cart checkout and inventory decrement",
+        "Structured modular service layer for maintainable feature expansion"
       ],
       githubUrl: "https://github.com/PriyaModi1309",
-      liveDemoNote: "Demo Project: Mock backend service configured."
-    },
-    4: {
-      title: "Task Management REST API",
-      subtitle: "Java | Spring Boot | Spring Security | MySQL | JPA",
-      badge: "Demo Project",
-      description: "A collaborative productivity and task lifecycle management API. Allows registered developers and team members to create tasks, assign priorities, organize by statuses, and filter assignments with user-isolated data security.",
-      technologies: ["Java 17+", "Spring Boot", "Spring Security", "MySQL", "Hibernate", "JPA", "Maven"],
-      architecture: "Task Request → Auth Filter → TaskController → TaskService → TaskRepository → MySQL Database",
-      features: [
-        "User authentication and task data isolation per user account",
-        "CRUD endpoints for managing individual and team tasks",
-        "Task lifecycle workflow transitions (PENDING → IN_PROGRESS → COMPLETED)",
-        "Priority flags (LOW, MEDIUM, HIGH, CRITICAL) and deadline query filters",
-        "Sorting and pagination for task list retrieval",
-        "Integration-tested endpoints with standard HTTP REST specifications"
-      ],
-      githubUrl: "https://github.com/PriyaModi1309",
-      liveDemoNote: "Demo Project: Mock backend service configured."
+      liveDemoNote: "E-Commerce backend REST services configured."
     }
   };
 
